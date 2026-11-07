@@ -1,16 +1,35 @@
-# React + Vite
+# ToolXier
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A browser-first collection of 79 practical utilities for developers, creators and problem-solvers.
 
-Currently, two official plugins are available:
+## Stack
+- React 19
+- Vite 8
+- Lucide React
+- Browser APIs and Web Crypto for local processing
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Development
+```bash
+npm ci
+npm run dev
+```
 
-## React Compiler
+## Production
+```bash
+npm run build
+npm run preview
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Included categories
+Developer, Text, Encoding, Security, Web & SEO, Calculators, Images & Files, Formatting & Utilities.
 
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Implementation notes
+- Most tools run locally in the browser; no application backend is required.
+- JWT decoding does not verify signatures.
+- The cron helper provides field breakdown, not a complete scheduler.
+- YAML support is intentionally limited to simple key/value mappings.
+- JavaScript/CSS minifiers and SQL/HTML formatters are lightweight helpers, not compiler-grade parsers.
+- Image metadata, resizing, compression and Data URL conversion run locally using browser APIs.
+- MD5 is not offered; SHA-1, SHA-256 and SHA-384 are available through Web Crypto.
+- QR helper opens a third-party QR generation URL; do not use it for sensitive content.
+- Never paste credentials or private tokens into tools you do not trust.
