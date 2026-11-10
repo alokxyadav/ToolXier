@@ -1,0 +1,14 @@
+{
+ "name": "toolxier-audit",
+ "private": true,
+ "type": "module",
+ "scripts": {
+  "audit": "node browser-audit.mjs",
+  "lighthouse": "node lighthouse.mjs"
+ },
+ "dependencies": {
+  "@sparticuz/chromium": "*",
+  "puppeteer-core": "*",
+  "lighthouse": "*"
+ }
+}

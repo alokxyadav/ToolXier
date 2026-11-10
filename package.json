@@ -1,0 +1,59 @@
+{
+ "name": "toolxier",
+ "private": true,
+ "version": "0.1.0",
+ "type": "module",
+ "scripts": {
+  "dev": "vite",
+  "build": "vite build && node scripts/sitemap.mjs",
+  "preview": "vite preview",
+  "test": "vitest run",
+  "e2e": "playwright test",
+  "serve": "node scripts/serve.mjs",
+  "docs:tools": "node scripts/gen-tools-doc.mjs",
+  "verify": "node scripts/verify.mjs",
+  "ship": "node scripts/publish.mjs"
+ },
+ "dependencies": {
+  "fast-xml-parser": "^5.12.0",
+  "jsqr": "^1.4.0",
+  "qrcode": "^1.5.4",
+  "react": "^18.3.1",
+  "react-dom": "^18.3.1",
+  "react-router-dom": "^7.18.5",
+  "yaml": "^2.9.1"
+ },
+ "devDependencies": {
+  "@playwright/test": "^1.65.0",
+  "@testing-library/dom": "^10.4.2",
+  "@testing-library/react": "^16.3.3",
+  "@vitejs/plugin-react": "^6.2.1",
+  "jsdom": "^31.0.0",
+  "vite": "^8.3.6",
+  "vitest": "^5.1.0"
+ },
+ "engines": {
+  "node": ">=20.19.0"
+ },
+ "description": "Free, open-source developer toolkit: 100+ privacy-first tools that run in your browser.",
+ "license": "MIT",
+ "repository": {
+  "type": "git",
+  "url": "git+https://github.com/alokxyadav/ToolXier.git"
+ },
+ "homepage": "https://github.com/alokxyadav/ToolXier",
+ "bugs": {
+  "url": "https://github.com/alokxyadav/ToolXier/issues"
+ },
+ "keywords": [
+  "developer-tools",
+  "json-formatter",
+  "jwt-decoder",
+  "base64",
+  "online-tools",
+  "pwa",
+  "react",
+  "vite",
+  "privacy"
+ ]
+}

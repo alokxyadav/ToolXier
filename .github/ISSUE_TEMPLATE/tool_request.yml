@@ -1,0 +1,15 @@
+name: Tool request
+description: Suggest a new tool or an improvement to an existing one
+labels: [enhancement, tool-request]
+body:
+  - type: input
+    id: name
+    attributes: { label: Tool name }
+    validations: { required: true }
+  - type: textarea
+    id: why
+    attributes: { label: What should it do, and why is it useful?, description: "Give an example input and the output you expect." }
+    validations: { required: true }
+  - type: dropdown
+    id: local
+    attributes: { label: Can it run fully in the browser?, options: ["Yes", "Not sure", "No — it needs a server or third-party API"] }

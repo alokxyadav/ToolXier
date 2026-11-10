@@ -1,0 +1,20 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci
+      - run: npm test
+      - run: npm run build
+        env: { SITE_URL: 'https://example.com', VITE_SITE_URL: 'https://example.com' }
+      - run: npm audit --omit=dev --audit-level=high
+      - name: Install browsers
+        run: npx playwright install --with-deps chromium webkit
+      - name: End-to-end tests (desktop, Android, iPhone profiles)
+        run: npm run e2e
+      - name: Lighthouse CI
+        run: npx -y @lhci/cli@0.14.0 autorun

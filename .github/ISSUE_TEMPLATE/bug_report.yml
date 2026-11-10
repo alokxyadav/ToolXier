@@ -1,0 +1,19 @@
+name: Bug report
+description: Something is broken or gives a wrong result
+labels: [bug]
+body:
+  - type: input
+    id: page
+    attributes: { label: Page / tool URL, placeholder: "/tools/json-formatter" }
+    validations: { required: true }
+  - type: textarea
+    id: steps
+    attributes: { label: Steps to reproduce, description: "What did you type or click? Use fake data — never paste real secrets or tokens." }
+    validations: { required: true }
+  - type: textarea
+    id: expected
+    attributes: { label: Expected vs actual result }
+    validations: { required: true }
+  - type: input
+    id: env
+    attributes: { label: Browser and device, placeholder: "Safari 18 on iPhone 15" }
